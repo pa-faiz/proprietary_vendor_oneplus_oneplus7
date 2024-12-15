@@ -189,4 +189,10 @@ PRODUCT_PACKAGES += \
     camera.qcom \
     com.qti.chi.override \
     libarm_proxy_skel \
-    libhvx_proxy_stub
+    libhvx_proxy_stub \
+    vendor.qti.hardware.btconfigstore@1.0_oneplus \
+    vendor.qti.hardware.btconfigstore@2.0_oneplus
+
+PRODUCT_PACKAGES += \
+    system_lib64_vendor_qti_hardware_btconfigstore@1_0 \
+    system_lib64_vendor_qti_hardware_btconfigstore@2_0

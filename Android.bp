@@ -1944,3 +1944,73 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.btconfigstore@1.0_oneplus",
+    stem: "vendor.qti.hardware.btconfigstore@1.0",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.btconfigstore@2.0_oneplus",
+    stem: "vendor.qti.hardware.btconfigstore@2.0",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+install_symlink {
+    name: "system_lib64_vendor_qti_hardware_btconfigstore@1_0",
+    installed_location: "lib64/vendor.qti.hardware.btconfigstore@1.0",
+    symlink_target: "/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so",
+}
+
+install_symlink {
+    name: "system_lib64_vendor_qti_hardware_btconfigstore@2_0",
+    installed_location: "lib64/vendor.qti.hardware.btconfigstore@2.0",
+    symlink_target: "/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so",
+}
